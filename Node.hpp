@@ -1,16 +1,20 @@
 #pragma once
+#include <string>
+#include <vector>
+#include <unordered_map>
 
 
 class Node{
 
     public:
-        Node(char _id, bool terminator);
+        Node(char _id, bool _terminator);
         bool isTerminatable();
-        addToList(char _label, int _id);
+        void addToList(char _label, int _id);
+        void traverse(std::string substr);
         
 
     private:
-        std::unordered_map(label,std::vector<id>) connections;
+        std::unordered_map(char,std::vector<int>) connections;
         bool terminator;
 
 }
