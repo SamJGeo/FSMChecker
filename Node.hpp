@@ -2,12 +2,13 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <shared_ptr>
 
 
 class Node{
 
     public:
-        Node(char _id, bool _terminator);
+        Node(int _id, bool _terminator);
         bool isTerminatable();
         void addToList(char _label, int _id);
         void traverse(std::string substr);
