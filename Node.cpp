@@ -11,8 +11,8 @@ bool Node::isTerminatable()
     return(terminator);
 };
         
-void Node::addToList(char _label, Node n){
-    connections.insert(std::make_pair<char,std::shared_ptr<Node>(_label,std::make_shared<Node>(n)));
+void Node::addToList(char _label, std::shared_ptr<Node> n){
+    connections.insert({_label,n});
 };
         
 void Node::traverse(std::string substr){

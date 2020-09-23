@@ -10,7 +10,7 @@ class Node{
     public:
         Node(int _id, bool _terminator);
         bool isTerminatable();
-        void addToList(char _label, Node n);
+        void addToList(char _label, std::shared_ptr<Node> n);
         void traverse(std::string substr);
         
 
